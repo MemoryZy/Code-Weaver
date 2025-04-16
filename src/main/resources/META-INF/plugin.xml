@@ -5,15 +5,23 @@
     <vendor email="memoryzk@outlook.com" url="https://github.com/MemoryZy">Memory</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.java</depends>
+    <depends optional="true" config-file="optional/plugin-java.xml">com.intellij.java</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
+    <resource-bundle>messages.CodeWeaverBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="org.jetbrains.plugins.template.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <!-- 通知组 -->
+        <notificationGroup displayType="BALLOON" id="CodeWeaver Plugin" isLogByDefault="false"/>
+        <notificationGroup displayType="BALLOON" id="CodeWeaver Plugin Log" isLogByDefault="true"/>
+        <notificationGroup displayType="STICKY_BALLOON" id="CodeWeaver Plugin Sticky" isLogByDefault="false"/>
+        <notificationGroup displayType="STICKY_BALLOON" id="CodeWeaver Plugin Sticky Log" isLogByDefault="true"/>
+
+        <!-- 异常报告 -->
+        <errorHandler implementation="cn.memoryzy.code.extension.error.ErrorReporter"/>
+
     </extensions>
 
     <applicationListeners>
-        <listener class="org.jetbrains.plugins.template.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
+
     </applicationListeners>
 </idea-plugin>
