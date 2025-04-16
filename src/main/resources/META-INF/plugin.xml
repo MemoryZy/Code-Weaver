@@ -1,0 +1,19 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>cn.memoryzy.code</id>
+    <name>Code Weaver</name>
+    <vendor email="memoryzk@outlook.com" url="https://github.com/MemoryZy">Memory</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow factoryClass="org.jetbrains.plugins.template.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="org.jetbrains.plugins.template.listeners.MyFrameStateListener" topic="com.intellij.ide.FrameStateListener"/>
+    </applicationListeners>
+</idea-plugin>
