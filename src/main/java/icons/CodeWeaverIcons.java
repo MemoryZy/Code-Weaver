@@ -10,6 +10,7 @@ import javax.swing.*;
  */
 public interface CodeWeaverIcons {
 
+    Icon logo = load("/icons/logo.svg");
 
 
     static Icon load(String iconPath) {
