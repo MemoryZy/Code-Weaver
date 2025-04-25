@@ -19,6 +19,8 @@
         <!-- 异常报告 -->
         <errorHandler implementation="cn.memoryzy.code.extension.error.ErrorReporter"/>
 
+        <!-- 新UI图标 -->
+        <iconMapper mappingFile="CodeWeaverIconMappings.json"/>
     </extensions>
 
     <applicationListeners>
