@@ -5,11 +5,17 @@ import com.intellij.notification.NotificationGroup;
 import com.intellij.notification.NotificationGroupManager;
 import com.intellij.notification.NotificationType;
 import com.intellij.notification.impl.NotificationFullContent;
+import com.intellij.notification.impl.NotificationsManagerImpl;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.popup.Balloon;
+import com.intellij.openapi.wm.IdeFrame;
+import com.intellij.ui.BalloonImpl;
+import com.intellij.ui.BalloonLayoutData;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
 
+import javax.swing.*;
 import java.util.List;
 
 /**
@@ -130,6 +136,36 @@ public class Notifications {
         actions.forEach(notification::addAction);
         notification.notify(project);
     }
+
+
+    @SuppressWarnings({"deprecation", "DuplicatedCode"})
+    // public static void showWelcomeNotification(Project project) {
+    //     Notification notification = Notifications.getBalloonLogNotificationGroup()
+    //             .createNotification(JsonAssistantBundle.messageOnSystem("notification.welcome.content",
+    //                             Urls.GITHUB_LINK,
+    //                             UrlType.DONATE.getId()
+    //                     ) + "<br/>",
+    //                     NotificationType.INFORMATION)
+    //             .setTitle(JsonAssistantBundle.messageOnSystem("notification.welcome.title", JsonAssistantPlugin.getVersion()))
+    //             .setImportant(true)
+    //             .setListener(new NotificationListenerImpl())
+    //             .addAction(new QuickStartAction())
+    //             .addAction(new DonateAction(JsonAssistantBundle.messageOnSystem("action.donate.welcome.text")));
+    //
+    //     IdeFrame window = (IdeFrame) NotificationsManagerImpl.findWindowForBalloon(project);
+    //     if (window != null) {
+    //         Balloon balloon = NotificationsManagerImpl.createBalloon(window,
+    //                 notification,
+    //                 false,
+    //                 false,
+    //                 BalloonLayoutData.fullContent(),
+    //                 UIManager.getInstance());
+    //
+    //         JComponent component = window.getComponent();
+    //         balloon.show(getUpperRightRelativePoint(component, (BalloonImpl) balloon), Balloon.Position.above);
+    //     }
+    // }
+
 
     public static class FullContentNotification extends Notification implements NotificationFullContent {
         public FullContentNotification(@NotNull @NonNls String groupId, @NotNull String title, @NotNull String content, @NotNull NotificationType type) {

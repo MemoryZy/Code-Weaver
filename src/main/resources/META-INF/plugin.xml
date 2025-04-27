@@ -5,7 +5,7 @@
     <vendor email="memoryzk@outlook.com" url="https://github.com/MemoryZy">Memory</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends optional="true" config-file="optional/plugin-java.xml">com.intellij.java</depends>
+    <depends>com.intellij.java</depends>
 
     <resource-bundle>messages.CodeWeaverBundle</resource-bundle>
 
@@ -19,6 +19,9 @@
         <!-- 异常报告 -->
         <errorHandler implementation="cn.memoryzy.code.extension.error.ErrorReporter"/>
 
+        <!-- 项目启动时 -->
+        <postStartupActivity implementation="cn.memoryzy.code.extension.PluginActivityManager"/>
+
         <!-- 新UI图标 -->
         <iconMapper mappingFile="CodeWeaverIconMappings.json"/>
     </extensions>
@@ -26,4 +29,35 @@
     <applicationListeners>
 
     </applicationListeners>
+
+    <actions>
+        <action id="CodeWeaver.Action.ObservePropertiesComparisonAction" class="cn.memoryzy.code.action.mapping.ObservePropertiesComparisonAction"/>
+        <action id="CodeWeaver.Action.GeneratePropertiesMappingAction" class="cn.memoryzy.code.action.mapping.GeneratePropertiesMappingAction"/>
+        <action id="CodeWeaver.Action.GenerateGetterAction" class="cn.memoryzy.code.action.method.GenerateGetterAction"/>
+        <action id="CodeWeaver.Action.GenerateSetterAction" class="cn.memoryzy.code.action.method.GenerateSetterAction"/>
+        <action id="CodeWeaver.Action.GenerateSetterWithDefaultValueAction" class="cn.memoryzy.code.action.method.GenerateSetterWithDefaultValueAction"/>
+        <action id="CodeWeaver.Action.GenerateJsonAnnotationAction" class="cn.memoryzy.code.action.annotation.GenerateJsonAnnotationAction"/>
+        <action id="CodeWeaver.Action.GenerateMpAnnotationAction" class="cn.memoryzy.code.action.annotation.GenerateMpAnnotationAction"/>
+        <action id="CodeWeaver.Action.GenerateSwaggerAnnotationAction" class="cn.memoryzy.code.action.annotation.GenerateSwaggerAnnotationAction"/>
+
+        <group id="CodeWeaver.Group.GenerateMethodReferenceGroup" class="cn.memoryzy.code.action.group.GenerateMethodReferenceGroup" popup="true"/>
+        <group id="CodeWeaver.Group.GenerateAnnotationGroup" class="cn.memoryzy.code.action.group.GenerateAnnotationGroup" popup="true"/>
+
+        <!-- Main -->
+        <action id="CodeWeaver.Action.Main" class="cn.memoryzy.code.action.CodeWeaverAction">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt N"/>
+        </action>
+
+        <group id="CodeWeaver.Group.Main" class="cn.memoryzy.code.action.group.CodeWeaverGroup"/>
+
+        <group id="CodeWeaver.Group.MainGroup">
+            <separator/>
+            <reference ref="CodeWeaver.Action.Main"/>
+            <reference ref="CodeWeaver.Group.Main"/>
+            <separator/>
+
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="EditorToggleColumnMode"/>
+        </group>
+    </actions>
+
 </idea-plugin>

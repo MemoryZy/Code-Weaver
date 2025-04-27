@@ -1,7 +1,8 @@
 {
   "icons": {
     "expui": {
-      "logo.svg": "icons/logo.svg"
+      "logo.svg": "icons/logo.svg",
+      "at.svg": "icons/at.svg"
     }
   }
 }

@@ -12,6 +12,8 @@ public interface CodeWeaverIcons {
 
     Icon logo = load("/icons/logo.svg");
 
+    Icon at = load("/icons/at.svg");
+
 
     static Icon load(String iconPath) {
         return IconLoader.getIcon(iconPath, CodeWeaverIcons.class);
