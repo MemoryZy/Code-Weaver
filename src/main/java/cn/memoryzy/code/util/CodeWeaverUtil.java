@@ -56,4 +56,38 @@ public class CodeWeaverUtil {
 
         return ReflectUtil.getMethod(clazz, methodName, paramTypes);
     }
+
+    /**
+     * 判断末尾是否为数字
+     *
+     * @param str 文本
+     * @return 若为数字，则为true；反之为false
+     */
+    public static boolean endsWithDigitRegex(String str) {
+        return StrUtil.isNotBlank(str) && str.matches(".*\\d$");
+    }
+
+
+    /**
+     * 区分开前缀和数字
+     *
+     * @param str 文本
+     * @return 数组[0]: 前缀；数组[1]: 数字
+     */
+    public static String[] splitEndNumber(String str) {
+        if (StrUtil.isBlank(str)) {
+            return new String[]{"", ""};
+        }
+        int index = str.length() - 1;
+        // 逆序查找第一个非数字的位置
+        while (index >= 0 && Character.isDigit(str.charAt(index))) {
+            index--;
+        }
+        // 分割字符串：前缀部分 + 末尾数字部分
+        String prefix = str.substring(0, index + 1);
+        String number = str.substring(index + 1);
+        return new String[]{prefix, number};
+    }
+
+
 }

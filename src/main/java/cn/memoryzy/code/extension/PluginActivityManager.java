@@ -1,7 +1,6 @@
 package cn.memoryzy.code.extension;
 
 import cn.memoryzy.code.CodeWeaverPlugin;
-import cn.memoryzy.code.util.Notifications;
 import com.intellij.ide.plugins.DynamicPluginListener;
 import com.intellij.ide.plugins.IdeaPluginDescriptor;
 import com.intellij.ide.util.PropertiesComponent;
