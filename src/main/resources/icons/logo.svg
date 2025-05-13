@@ -1,0 +1,39 @@
+<svg width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip222_105">
+			<rect id="magic.svg" width="18.000000" height="18.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip222_105)">
+		<rect id="矩形 10" x="10.072021" y="6.049316" rx="1.300000" width="3.656250" height="13.042559" transform="rotate(45.037 10.072021 6.049316)" fill="#6E6E6E" fill-opacity="1.000000"/>
+		<rect id="矩形 10" x="10.071777" y="6.544434" rx="1.300000" width="2.956250" height="12.342559" transform="rotate(45.037 10.071777 6.544434)" stroke="#6E6E6E" stroke-opacity="1.000000" stroke-width="0.700000"/>
+		<path id="矩形 11" d="M12.22 5.75L12.96 6.49C13.47 7 13.47 7.82 12.96 8.33L10.5 10.78L7.92 8.2L10.38 5.74C10.89 5.24 11.71 5.24 12.22 5.75Z" fill="#CECEDD" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="矩形 11" d="M12.96 6.49C13.47 7 13.47 7.82 12.96 8.33L10.5 10.78L7.92 8.2L10.38 5.74C10.89 5.24 11.71 5.24 12.22 5.75L12.96 6.49ZM12.46 6.98C12.7 7.22 12.7 7.6 12.46 7.83L10.5 9.79L8.91 8.2L10.87 6.24C11.11 6.01 11.49 6.01 11.72 6.24L12.46 6.98Z" fill="#6E6E6E" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<g opacity="0.300000">
+			<rect id="矩形 12" x="9.302002" y="10.178223" width="0.780000" height="8.543701" transform="rotate(45.0007 9.302002 10.178223)" fill="#6E6E96" fill-opacity="1.000000"/>
+		</g>
+		<g opacity="0.230000">
+			<rect id="矩形 15" x="12.401855" y="6.904785" width="0.843750" height="2.962402" transform="rotate(45.0007 12.401855 6.904785)" fill="#6E6E96" fill-opacity="1.000000"/>
+		</g>
+		<g opacity="0.230000">
+			<rect id="矩形 17" x="10.968994" y="9.643066" width="0.440000" height="2.502441" transform="rotate(134.67 10.968994 9.643066)" fill="#6E6E96" fill-opacity="1.000000"/>
+		</g>
+		<g opacity="0.300000">
+			<path id="矩形 13" d="M1.93 15.47C1.77 15.29 1.77 15.01 1.95 14.84L3.93 16.91C3.75 17.08 3.47 17.07 3.31 16.9L1.93 15.47Z" fill="#6E6E96" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+		<g opacity="0.300000">
+			<path id="矩形 14" d="M8.24 9.11C8.03 8.9 8.03 8.56 8.24 8.34L10.04 10.16C10.15 10.27 10.15 10.44 10.04 10.55C9.94 10.65 9.76 10.65 9.66 10.55L8.24 9.11Z" fill="#6E6E96" fill-opacity="1.000000" fill-rule="evenodd"/>
+		</g>
+		<rect id="矩形 20" x="5.340088" y="4.080078" rx="0.808594" width="1.617188" height="3.093750" transform="rotate(-45 5.340088 4.080078)" fill="#F66485" fill-opacity="1.000000"/>
+		<rect id="矩形 20" x="5.340088" y="4.080078" rx="0.808594" width="1.617188" height="3.093750" transform="rotate(-45 5.340088 4.080078)" stroke="#F66485" stroke-opacity="1.000000" stroke-width="0.500000"/>
+		<rect id="矩形 23" x="10.687500" y="0.689941" rx="0.667969" width="1.335938" height="2.812500" fill="#CDCE12" fill-opacity="1.000000"/>
+		<rect id="矩形 23" x="10.687500" y="0.689941" rx="0.667969" width="1.335938" height="2.812500" stroke="#CDCE12" stroke-opacity="1.000000" stroke-width="0.500000"/>
+		<rect id="矩形 24" x="14.800049" y="7.600098" rx="0.667969" width="1.335938" height="2.812500" transform="rotate(-90 14.800049 7.600098)" fill="#8CD447" fill-opacity="1.000000"/>
+		<rect id="矩形 24" x="14.800049" y="7.600098" rx="0.667969" width="1.335938" height="2.812500" transform="rotate(-90 14.800049 7.600098)" stroke="#8CD447" stroke-opacity="1.000000" stroke-width="0.500000"/>
+		<rect id="矩形 22" x="12.530029" y="10.990234" rx="0.808594" width="1.617188" height="3.093750" transform="rotate(-45 12.530029 10.990234)" fill="#52C0D9" fill-opacity="1.000000"/>
+		<rect id="矩形 22" x="12.530029" y="10.990234" rx="0.808594" width="1.617188" height="3.093750" transform="rotate(-45 12.530029 10.990234)" stroke="#52C0D9" stroke-opacity="1.000000" stroke-width="0.500000"/>
+	</g>
+</svg>

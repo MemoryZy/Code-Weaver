@@ -1,0 +1,53 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>cn.memoryzy.code</id>
+    <name>Code Weaver</name>
+    <vendor email="memoryzk@outlook.com" url="https://github.com/MemoryZy">Memory</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+
+    <resource-bundle>messages.CodeWeaverBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- 通知组 -->
+        <notificationGroup displayType="BALLOON" id="CodeWeaver Plugin" isLogByDefault="false"/>
+        <notificationGroup displayType="BALLOON" id="CodeWeaver Plugin Log" isLogByDefault="true"/>
+        <notificationGroup displayType="STICKY_BALLOON" id="CodeWeaver Plugin Sticky" isLogByDefault="false"/>
+        <notificationGroup displayType="STICKY_BALLOON" id="CodeWeaver Plugin Sticky Log" isLogByDefault="true"/>
+
+        <!-- 异常报告 -->
+        <errorHandler implementation="cn.memoryzy.code.extension.error.ErrorReporter"/>
+
+        <!-- 项目启动时 -->
+        <postStartupActivity implementation="cn.memoryzy.code.extension.PluginActivityManager"/>
+
+        <!-- 新UI图标 -->
+        <iconMapper mappingFile="CodeWeaverIconMappings.json"/>
+
+        <projectService serviceImplementation="cn.memoryzy.code.toolwindow.PropertiesComparisonToolWindowManager"/>
+    </extensions>
+
+    <applicationListeners>
+
+    </applicationListeners>
+
+    <actions>
+        <!-- Main -->
+        <action id="CodeWeaver.Action.Main" class="cn.memoryzy.code.action.CodeWeaverAction">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt N"/>
+        </action>
+
+        <group id="CodeWeaver.Group.Main" class="cn.memoryzy.code.action.group.CodeWeaverGroup"/>
+
+        <group id="CodeWeaver.Group.MainGroup">
+            <separator/>
+            <reference ref="CodeWeaver.Action.Main"/>
+            <reference ref="CodeWeaver.Group.Main"/>
+            <separator/>
+
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="EditorToggleColumnMode"/>
+        </group>
+    </actions>
+
+</idea-plugin>
